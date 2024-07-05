@@ -1,16 +1,16 @@
 .luckyjet {
   width: 100%;
-  font-family: "Rubik", sans-serif;
+  /* font-family: "Rubik", sans-serif; */
 }
 
 #luckyjet-logo-text-purple {
   font-weight: 800;
   font-size: 2.2em;
-  background: linear-gradient(to bottom, hsl(275, 61%, 63%), hsl(275, 71%, 51%));
+  background: linear-gradient(to bottom, hsl(215, 100%, 75%), hsl(239, 80%, 57%));
   /* text-shadow: 1px 0 1px #000,  */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px rgba(79, 0, 84, 0.6);
+  -webkit-text-stroke: 1px rgba(9, 0, 181, 0.6);
 }
 
 .luckyjet-inner {
@@ -25,7 +25,7 @@
 .luckyjet-background {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../assets/luckyjet/images/background.png");
+  background-image: url("../assets/luckyjet/images/background.jpg");
   width: 100%;
   height: 100%;
   position: absolute;
@@ -52,7 +52,7 @@
   height: 30px;
   border-radius: 20%;
   position: relative;
-  background: #BA60FD;
+  background: #1d54c8;
 }
 
 .luckyjet-button-back button img {
@@ -62,29 +62,41 @@
 
 .luckyjet-pers-animate {
   position: absolute;
-  left: -205px;
-  top: 138px;
+  left: -80px;
+  bottom: 0;
   z-index: 0;
-  width: 200px;
-  animation: cowmove 10s infinite;
+  width: 100px;
+  animation: cowmove 15s infinite ease-in-out;
 }
 
 @keyframes cowmove {
   0% {
-    transform: translateX(0px) rotateY(0deg);
+    transform: translate(0, 0);
   }
-
-  49% {
-    transform: translateX(200px) translateY(-25px) rotateY(0deg);
+  15% {
+      transform: translate(25vw, -25vh);
   }
-
+  30% {
+      transform: translate(50vw, -50vh);
+  }
+  45% {
+      transform: translate(75vw, -75vh);
+  }
+  60%, 100% {
+      transform: translate(101vw, -101vh);
+  }
+  /* 25% {
+      transform: translate(25vw, -25vh);
+  }
   50% {
-    transform: translateX(200px) translateY(-25px) rotateY(0deg);
+      transform: translate(50vw, -50vh);
   }
-
+  75% {
+      transform: translate(75vw, -75vh);
+  }
   100% {
-    transform: translateX(0px) rotateY(0deg);
-  }
+      transform: translate(101vw, -101vh);
+  } */
 }
 
 
@@ -179,24 +191,28 @@
 }
 
 .luckyjet-name-bot {
+  margin-top: -30px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   font-size: 15px;
   font-weight: 700;
+  color: #ffffff8b;
   text-shadow: black 0 0 30px;
 }
 
 .luckyjet-print-signal {
   position: absolute;
+  margin-top: -100px;
   margin-bottom: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 217px;
   height: 217px;
-  background-color: #34004c;
-  border: 4px solid white;
-  border-radius: 50%;
+  background-color: #12347c;
+  border: 4px solid 1d54c8;
+  border-radius: 20%;
   font-size: 3.2em;
   font-weight: 500;
   transition: all .5s;
@@ -230,7 +246,7 @@
 .luckyjet-stop-progress {
   width: 230px;
   height: 18px;
-  background: linear-gradient(90deg, #BA60FD 0%, #218288 100%) left /0% 100% no-repeat #D9D9D9;
+  background: linear-gradient(90deg, #8cb0ff 0%, #218288 100%) left /0% 100% no-repeat #D9D9D9;
   border-radius: 15px;
 }
 
@@ -254,12 +270,13 @@
 
 .luckyjet-get-signal, .luckyjet-get-signal-two {
   /* box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05); */
-  border-radius: 30px;
+  border-radius: 25px;
   font-weight: 900;
   font-size: 24px;
-  background-color: #e801e8;
+  background-color: #1d54c8;
   color: white;
-  text-shadow: white 0 0 30px;
+  margin-bottom: -10px;
+  /* text-shadow: white 0 0 30px; */
 }
 
 
@@ -319,14 +336,14 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 220px;
+  width: 180px;
   height: 56px;
-  background: white;
-  font-size: 22px;
+  background: rgb(47, 108, 152);
+  font-size: 15px;
   /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05); */
   border-radius: 30px;
   color: black;
-  font-weight: 600;
+  font-weight: 800;
   text-decoration: none;
   transition: all .2s;
   z-index: 4;
@@ -338,7 +355,7 @@
   position: absolute;
   inset: 0px;
   z-index: -1;
-  background: linear-gradient(90deg, #e801e8 1%, #ff01dd 100%);
+  background: linear-gradient(90deg, #0193e8 1%, #9ca7b2 100%);
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
   opacity: 0.6;
   filter: blur(15px);
