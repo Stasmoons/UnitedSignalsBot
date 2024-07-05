@@ -270,7 +270,7 @@
 
 .luckyjet-get-signal, .luckyjet-get-signal-two {
   /* box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05); */
-  border-radius: 25px;
+  border-radius: 5px;
   font-weight: 900;
   font-size: 24px;
   background-color: #1d54c8;
@@ -341,7 +341,7 @@
   background: rgb(47, 108, 152);
   font-size: 15px;
   /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05); */
-  border-radius: 30px;
+  border-radius: 5px;
   color: black;
   font-weight: 800;
   text-decoration: none;
@@ -359,7 +359,7 @@
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
   opacity: 0.6;
   filter: blur(15px);
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .luckyjet-game-here::before {
@@ -370,7 +370,7 @@
   background: linear-gradient(90deg, white 0%, white 80%);
   /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); */
   filter: blur(5px);
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .luckyjet-get-signal:active,
