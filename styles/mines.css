@@ -221,7 +221,7 @@ a {
   margin-top: -60px;
   border-radius: 15px;
   transition: 0.1s;
-  border: solid 2px white;
+  border: solid 4px #5313879f;
 }
 
 .mines-game-button {

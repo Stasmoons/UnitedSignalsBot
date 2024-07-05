@@ -40,7 +40,6 @@ minesButtonGetSignal.onclick = function () {
 
     const range = 40;
     const minesRandomPhotoNumber = Math.floor(Math.random() * (range - 1) + 1);
-    alert(`${minesRandomPhotoNumber}`)
-    minesSignal.src = `../assets/mines/images/signals/${minesRandomPhotoNumber}.jpg`;
+    minesSignal.src = `assets/mines/images/signals/${minesRandomPhotoNumber}.jpg`;
   }, 3000);
 }
