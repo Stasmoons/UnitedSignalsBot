@@ -38,7 +38,7 @@ minesButtonGetSignal.onclick = function () {
     minesSignal.classList.remove("mines-deactive");
     minesButtonGetSignal.disabled = false;
 
-    const range = 2;
+    const range = 40;
     const minesRandomPhotoNumber = Math.floor(Math.random() * (range - 1) + 1);
     minesSignal.src = `/assets/mines/images/signals/${minesRandomPhotoNumber}.jpg`;
   }, 3000);
