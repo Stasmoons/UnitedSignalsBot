@@ -13,15 +13,15 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(#141414, #08022b);
+  background: linear-gradient(#0a0044 30%, #141414);
   color: #ffffff;
 }
 
 .header-lang {
-  width: 60px;
+  width: 80px;
   height: 40px;
 
-  padding: 2px 0px 2px 2px;
+  padding: 2px 0px 2px 8px;
 
   background: #2F2F2E;
 
@@ -104,6 +104,7 @@ select:focus {
   text-align: left;
 
   border-bottom: 5px solid #185eeb;
+  box-shadow: 0px 0px 15px #185eeb;
   margin-bottom: 100px;
 }
 
@@ -241,12 +242,21 @@ select:focus {
 
 /*Ð’Ñ‹Ð±Ð¾Ñ€ Ð¸Ð³Ñ€Ñ‹*/
 
-.choose div{
+.choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.choose div {
   justify-content: center;
   align-items: center;
   display: flex;
-  padding: 20px 20px;
+  padding: 20px;
   width: 80vw;
+  height: 50vh;
 }
 
 .choose p {
@@ -258,15 +268,35 @@ select:focus {
 }
 
 .choose-card {
+  position: relative; /* Ensure the card is positioned relative to its container */
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 80vw;
   height: 40vh;
   padding: 0px;
-
-  background: #2F2F2E;
+  background-color: rgba(47, 47, 46, 0.2);
   border: 2px solid #185eeb;
-  border-radius: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.choose-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/icon/menu/choose-bg.jpg");
+  background-size: cover; /* Adjust based on your needs */
+  background-position: center;
+  opacity: 0.08; /* Adjust opacity as needed */
+  z-index: 1; /* Ensure it is behind the content */
+}
+
+.choose-card > * {
+  position: relative;
+  z-index: 2; /* Ensure content is above the pseudo-element */
 }
 
 .choose-button {
@@ -275,10 +305,8 @@ select:focus {
   cursor: pointer;
   width: 60vw;
   height: 70vh;
-
-  /* border: 1px solid #185eeb; */
   border-radius: 10px;
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
