@@ -125,7 +125,7 @@
   background-color: rgb(223, 223, 223);
 }
 .activation-button:active {
-  transform: scale(0.9);
+  transform: scale(92%);
   background-color: rgb(180, 180, 180);
 }
 
