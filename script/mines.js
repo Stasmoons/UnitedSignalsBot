@@ -1,4 +1,7 @@
 minesGo.onclick = function () {
+  menuGoTimerError(5, "go"); 
+  return;
+
   pageHome.classList.add("b-none");
   pageHome.classList.remove("b-show");
   header.classList.add("b-none");

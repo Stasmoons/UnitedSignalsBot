@@ -1,3 +1,9 @@
+function limitText(limitField, limitNum) {
+  if (limitField.value.length > limitNum) {
+    limitField.value = limitField.value.substring(0, limitNum);
+  }
+}
+
 for (let b of backHome) {
   b.onclick = function () {
     backchek = 1
@@ -53,8 +59,6 @@ for (let b of backHome) {
     }
 
 
-
-
     //Шапка
     header.classList.remove("b-none");
     header.classList.add("b-show");
@@ -95,6 +99,32 @@ home.onclick = function () {
 
   active.style.removeProperty("margin-right");
   active.style.removeProperty("margin-left");
+}
+
+
+
+function menuGoTimerError(time) {
+  menuErrorNotification.classList.remove("luckyjet-deactivate", "b-none");
+
+  const timer = setInterval(() => {
+    if (time >= 1) {
+      time--;
+      menuErrorProgress.style["animation"] = "animateErrorProgress 5s linear infinite";
+      menuErrorNotification.style["transform"] = "translateY(0px)";
+    } else {
+      menuErrorNotification.style["transform"] = "translateY(-99px)";
+      menuErrorProgress.style["animation"] = "none";
+      clearInterval(timer);
+      menuErrorNotification.classList.add("luckyjet-deactivate");
+    }
+
+    menuErrorExit.onclick = function () {
+      menuErrorNotification.classList.add("luckyjet-deactivate");
+      menuErrorNotification.style["transform"] = "translateY(-99px)";
+      menuErrorProgress.style["animation"] = "none";;
+      clearInterval(timer);
+    }
+  }, 1000)
 }
 
 // channel.onclick = function () {

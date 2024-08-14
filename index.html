@@ -29,6 +29,16 @@
     </div>
   </header>
 
+  <div id="menu-error-notification" class="luckyjet-error-notification luckyjet-deactivate">
+    <div class="luckyjet-error-background"></div>
+    <img class="luckyjet-icon-error" src="assets/luckyjet/icons/error.svg" alt="error">
+    <p id="menu-text-error" class="luckyjet-text-error lng-devNotification">The game is in development!</p>
+    <div id="menu-error-exit" class="luckyjet-error-exit">
+      <img src="assets/luckyjet/icons/error-exit.svg" alt="exit">
+    </div>
+    <div id="menu-error-progress" class="luckyjet-error-progress"></div>
+  </div>
+
   <section id="page-home" class="choose">
     <p class="lng-choose">CHOOSE GAME:</p>
     <div class="choose-card">
@@ -163,6 +173,15 @@
       </div>
 
       <div class="luckyjet-background"></div>
+      
+      <div class="new-content">
+        <div class="waiting-circle lng-wait">Waiting...</div>
+        <div class="activation-container">
+          <label maxlength="5" class="activation-input-label lng-activateKey" for="activationInput">Enter activation key:</label>
+          <input type="text" onKeyDown="limitText(this,9);" maxlength="10" id="activationInput" class="activation-input"/>
+          <button class="activation-button lng-activateBttn">Activate</button>
+        </div>
+      </div>
 
 
       <div id="luckyjet-error-notification" class="luckyjet-error-notification luckyjet-deactivate">

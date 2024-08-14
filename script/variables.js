@@ -7,6 +7,15 @@ const minesGo = document.getElementById("mines-go");
 const royalGo = document.getElementById("royal-go");
 const bumpucksGo = document.getElementById("bumpucks-go");
 
+
+// УВЕДОМЛЕНИЕ В МЕНЮ
+const menuStopProgress = document.getElementById("menu-stop-progress");
+const menuErrorNotification = document.getElementById("menu-error-notification");
+const menuErrorProgress = document.getElementById("menu-error-progress");
+const menuTextError = document.getElementById("menu-text-error");
+const menuGetSignalTwo = document.getElementById("menu-get-signal-two");
+const menuErrorExit = document.getElementById("menu-error-exit");
+
 //Aviator
 const aviatorGetSignal = document.getElementById("aviator-get-signal");
 const aviatorStopSignalTimeBlock = document.getElementById("aviator-stop-signal-time-block");

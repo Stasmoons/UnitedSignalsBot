@@ -86,8 +86,26 @@ const langArr = {
   "instTwoTwo": {
     "en": "2. Chose 3 traps",
     "ru": "2. Выберите 3 ловушки"
-  }
+  },
 
+  "devNotification": {
+    "en": "The game is in development!",
+    "ru": "Игра в разработке!"
+  },
+
+  "wait": {
+    "en": "Waiting...",
+    "ru": "Ожидание..."
+  },
+  "activateKey": {
+    "en": "Enter activation key:",
+    "ru": "Введите ключ активации:"
+  },
+  "activateBttn": {
+    "en": "Activation",
+    "ru": "Активация"
+  },
+  
 }
 
 select.addEventListener("change", changeURLLanguage);

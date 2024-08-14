@@ -3,6 +3,8 @@ luckyjetGo.onclick = function () {
   pageHome.classList.remove("b-show");
   header.classList.add("b-none");
   header.classList.remove("b-show");
+
+  menuErrorNotification.classList.add("b-none");
   // menu.classList.add("b-none");
   // menu.classList.remove("b-show");
 
