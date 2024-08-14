@@ -2,7 +2,14 @@ function limitText(limitField, limitNum) {
   if (limitField.value.length > limitNum) {
     limitField.value = limitField.value.substring(0, limitNum);
   }
+  limitField.style.color = "black";
 }
+
+
+document.getElementById("activationButton").onclick = function() {
+  document.getElementById("activationInput").style.color = "red";
+}
+
 
 for (let b of backHome) {
   b.onclick = function () {
