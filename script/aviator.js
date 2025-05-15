@@ -70,8 +70,7 @@ function aviatorGoTimer(time) {
       aviatorStopProgress.style["animation"] = `animateProgress ${timerSeconds}s linear infinite`;
       aviatorStopSignalTimeBlock.classList.remove("aviator-deactivate");
       let stopTimer = document.getElementById("aviator-stop-timer");
-      let hash = window.location.hash;
-      hash = hash.substr(1);
+      hash = "ru";
       if (hash == "en") {
         stopTimer.innerHTML = `${time--}${"<span> seconds</span>"}`;
         timer = time;

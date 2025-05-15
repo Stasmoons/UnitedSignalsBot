@@ -83,19 +83,19 @@ for (let b of backHome) {
 //   active.style["margin-right"] = "176px";
 // }
 
-home.onclick = function () {
-  // Отключаем страницу
-  pageInfo.classList.add("b-none");
-  pageInfo.classList.remove("b-show");
-  pageChannel.classList.add("b-none");
-  pageChannel.classList.remove("b-show");
-  // Включаем страницу
-  pageHome.classList.remove("b-none");
-  pageHome.classList.add("b-show");
+// home.onclick = function () {
+//   // Отключаем страницу
+//   pageInfo.classList.add("b-none");
+//   pageInfo.classList.remove("b-show");
+//   pageChannel.classList.add("b-none");
+//   pageChannel.classList.remove("b-show");
+//   // Включаем страницу
+//   pageHome.classList.remove("b-none");
+//   pageHome.classList.add("b-show");
 
-  active.style.removeProperty("margin-right");
-  active.style.removeProperty("margin-left");
-}
+//   active.style.removeProperty("margin-right");
+//   active.style.removeProperty("margin-left");
+// }
 
 // channel.onclick = function () {
 //   // Отключаем страницу

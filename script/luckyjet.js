@@ -70,8 +70,7 @@ function luckyjetGoTimer(time) {
       luckyjetStopProgress.style["animation"] = `animateProgress ${timerSeconds}s linear infinite`;
       luckyjetStopSignalTimeBlock.classList.remove("luckyjet-deactivate");
       let stopTimer = document.getElementById("luckyjet-stop-timer");
-      let hash = window.location.hash;
-      hash = hash.substr(1);
+      hash = "ru";
       if (hash == "en") {
         stopTimer.innerHTML = `${time--}${"<span> seconds</span>"}`;
         timerr = time;

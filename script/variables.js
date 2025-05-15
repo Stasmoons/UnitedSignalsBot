@@ -70,7 +70,7 @@ const menu = document.getElementById("menu");
 
 //Кнопки меню
 const info = document.getElementById("menu-button-info");
-const home = document.getElementById("menu-button-home");
+// const home = document.getElementById("menu-button-home");
 const channel = document.getElementById("menu-button-channel");
 
 //Активная кнопка
