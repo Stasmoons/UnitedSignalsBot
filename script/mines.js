@@ -16,7 +16,12 @@ minesGo.onclick = function () {
 }
 
 minesButtonGetSignal.onclick = function () {
-  backchek = 0
+  if (isDepositMade == 0) {
+    showDepMsg();
+    return;
+  }
+
+  backchek = 0;
   minesGameScreen.style["z-index"] = "2";
   minesSignal.classList.add("mines-deactive");
   minesScreenStart.classList.add("mines-deactive");

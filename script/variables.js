@@ -1,5 +1,16 @@
 const timerSeconds = 20;
 
+// Параметры из ссылки
+const params = new URLSearchParams(window.location.search);
+
+const isDepositMade = params.get('is_deposit_made');
+
+const coefficientsRaw = params.get('coefficients');
+const coefficients = coefficientsRaw
+  ? coefficientsRaw.split(',').map(Number)
+  : [];
+
+
 //Кнопки запуска игр
 const aviatorGo = document.getElementById("aviator-go");
 const luckyjetGo = document.getElementById("luckyjet-go");

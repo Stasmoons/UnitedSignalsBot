@@ -1,3 +1,6 @@
+let luckyjetSignalIndex = 0;
+
+
 luckyjetGo.onclick = function () {
   pageHome.classList.add("b-none");
   pageHome.classList.remove("b-show");
@@ -24,11 +27,23 @@ function getRandomFloat(min, max, decimals) {
 
 //Нажатие на кнопку "GET SIGNAL"
 luckyjetGetSignal.onclick = function () {
-  let receivingSignal = getRandomFloat(1.00, 3.99, 2);
+  if (isDepositMade == 0) {
+    showDepMsg();
+    return;
+  }
+
+  let receivingSignal;
+  if (coefficients.length === 0) {
+    receivingSignal = getRandomFloat(1.00, 3.99, 2);
+  } else {
+    receivingSignal = coefficients[luckyjetSignalIndex];
+    luckyjetSignalIndex = (luckyjetSignalIndex + 1) % coefficients.length; 
+  }
 
   if ((receivingSignal.toString().length == 3)) {
     receivingSignal += "0";
-  } if ((receivingSignal.toString().length == 1)) {
+  } 
+  if ((receivingSignal.toString().length == 1)) {
     receivingSignal += ".00";
   }
   luckyjetPrintSignal.innerHTML = `${receivingSignal}${"x"}`;

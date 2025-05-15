@@ -1,4 +1,4 @@
-location.href = window.location.pathname + "#en";
+// location.href = window.location.pathname + "#en";
 
 const langArr = {
   "choose": {
@@ -92,7 +92,7 @@ const langArr = {
 
 select.addEventListener("change", changeURLLanguage);
 
-const allLang = ["en", "ru"]
+const allLang = ["ru", "en"]
 
 //Перенаправляем на url с указанием языка
 function changeURLLanguage() {
