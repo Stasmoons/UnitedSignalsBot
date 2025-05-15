@@ -1,3 +1,6 @@
+let aviatorSignalIndex = 0;
+
+
 aviatorGo.onclick = function () {
   menuGoTimerError(5, "go"); 
   return;
@@ -27,7 +30,18 @@ function aviatorGetRandomFloat(min, max, decimals) {
 
 //Нажатие на кнопку "GET SIGNAL"
 aviatorGetSignal.onclick = function () {
-  let receivingSignal = aviatorGetRandomFloat(1.00, 3.99, 2);
+  if (isDepositMade == 0) {
+    showDepMsg();
+    return;
+  }
+
+  let receivingSignal;
+  if (coefficients.length === 0) {
+    receivingSignal = aviatorGetRandomFloat(1.00, 3.99, 2);
+  } else {
+    receivingSignal = coefficients[aviatorSignalIndex];
+    aviatorSignalIndex = (aviatorSignalIndex + 1) % coefficients.length; 
+  }
 
   if ((receivingSignal.toString().length == 3)) {
     receivingSignal += "0";
@@ -99,7 +113,7 @@ function aviatorGoTimerError(time) {
     aviatorErrorExit.onclick = function () {
       aviatorErrorNotification.classList.add("aviator-deactivate");
       aviatorErrorNotification.style["transform"] = "translateY(-99px)";
-      aviatorErrorProgress.style["animation"] = "none";;
+      aviatorErrorProgress.style["animation"] = "none";
       clearInterval(timer);
       aviatorGetSignalTwo.disabled = false;
     }

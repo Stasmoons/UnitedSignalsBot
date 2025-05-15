@@ -18,6 +18,23 @@ body {
   color: #ffffff;
 }
 
+
+#deposit-msg {
+  display: none;
+  position: absolute; 
+  flex-direction: column; 
+  justify-content: center; 
+  width: 90%; 
+  height: 60%;
+  border-radius: 2vmax;
+  padding: 8%;
+  background-color: #0a0044;
+  color: white;
+  z-index: 1000;
+  gap: 2vh;
+  font-size: 110%;
+}
+
 .header-lang {
   width: 60px;
   height: 40px;
